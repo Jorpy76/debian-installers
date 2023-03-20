@@ -4,14 +4,14 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
+sudo apt install -y dkms xorg-server xorg-xinit xbacklight xbindkeys xvkbd xinput brightnessctl
 
 # PACKAGE INCLUDES build-essential.
 sudo apt install -y build-essential
 
 # Microcode for Intel/AMD 
-# sudo apt install -y amd64-microcode
-sudo apt install -y intel-microcode 
+sudo apt install -y amd64-microcode
+#sudo apt install -y intel-microcode 
 
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager
@@ -29,10 +29,10 @@ sudo apt install -y kitty
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 
 # Neofetch/HTOP
-sudo apt install -y neofetch htop
+sudo apt install -y neofetch btop
 
 # Network Manager
-sudo apt install -y network-manager network-manager-gnome 
+sudo apt install -y network-manager 
 
 # Installation for Appearance management
 sudo apt install -y lxappearance 
@@ -51,17 +51,17 @@ sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-t
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
+#sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups system-config-printer simple-scan
+#sudo apt install -y cups system-config-printer simple-scan
 sudo apt install -y bluez blueman
 
-sudo systemctl enable cups
+#sudo systemctl enable cups
 sudo systemctl enable bluetooth
 
 # Packages needed for bspwm installation
-sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany scrot
+sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip scrot
 
 # Command line text editor -- nano preinstalled 
 sudo apt install -y micro
@@ -74,10 +74,6 @@ mkdir -p ~/.config/{bspwm,sxhkd,dunst}
 
 install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
 install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
-
-# Install Lightdm Console Display Manager
-sudo apt install -y lightdm lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm
 
 
 ########################################################
