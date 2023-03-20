@@ -4,7 +4,7 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y dkms xorg-server xorg-xinit xbacklight xbindkeys xvkbd xinput brightnessctl
+sudo apt install -y dkms xorg-server xorg-xinit xbacklight xbindkeys xvkbd xinput brightnessctl xsetroot
 
 # PACKAGE INCLUDES build-essential.
 sudo apt install -y build-essential
